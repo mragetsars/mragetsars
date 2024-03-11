@@ -1,4 +1,4 @@
-<h3 align="center"><img width="500" style="border-radius:5px;" alt="screenshot" src="https://i.pinimg.com/736x/46/c3/c6/46c3c6af1371449c26eb37e098856489.jpg"></h3>
+<h3 align="center"><img width="600" style="border-radius:5px;" alt="screenshot" src="https://i.pinimg.com/736x/46/c3/c6/46c3c6af1371449c26eb37e098856489.jpg"></h3>
 
 </p>
 </div>
@@ -22,8 +22,5 @@
 <div align="center">
   <a href="https://wakatime.com/@low_mist" style="margin-right: 0;">
     <img height="200px" src="https://github-readme-stats.vercel.app/api/wakatime?username=low_mist&theme=gotham&hide_border=true&layout=compact&hide_title=true&langs_count=14&range=all_time" width="420px" alt="@low_mist's wakatime stats"/>
-  </a>
-  <a href="https://github.com/mrastegars?tab=repositories">
-    <img height="200px" src="https://github-readme-stats-alpha-seven-73.vercel.app/api/top-langs/?username=mrastegars&layout=compact&hide_border=true&langs_count=10&theme=gotham&size_weight=0.5&count_weight=0.5&hide=html,css" width="300px" alt="@low_mist's top languages"/>
   </a>
 </div>
