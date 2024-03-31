@@ -18,6 +18,6 @@
 </p> -->
 <div align="center">
   <a href="https://wakatime.com/@low_mist" style="margin-right: 0;">
-    <img height="200px" src="https://github-readme-stats.vercel.app/api/wakatime?username=low_mist&theme=gotham&hide_border=true&layout=compact&hide_title=true&langs_count=14&range=all_time" width="420px" alt="@low_mist's wakatime stats"/>
+    <img height="200px" src="https://github-readme-stats.vercel.app/api/wakatime?username=low_mist&theme=gotham&hide_border=true&layout=compact&hide_title=true&langs_count=14&range=all_time" width="400px" alt="@low_mist's wakatime stats"/>
   </a>
 </div>
