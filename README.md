@@ -12,7 +12,7 @@
 [ins-img]: http://img.shields.io/badge/Instagram-purple.svg?style=flat-square
 [ins-url]: https://instagram.com/mragetsars
 [tel-img]: http://img.shields.io/badge/Telegram-blue.svg?style=flat-square
-[tel-url]: https://t.me/mragetsars_channel
+[tel-url]: https://t.me/mragetsars_bot
 [pri-img]: http://img.shields.io/badge/Printrest-crimson.svg?style=flat-square
 [pri-url]: https://www.pinterest.com/mragetsars
 [red-img]: http://img.shields.io/badge/Reddit-red.svg?style=flat-square
