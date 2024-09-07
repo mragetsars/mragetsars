@@ -2,26 +2,24 @@
 
 [![mragetsars][tel-img]][tel-url] 
 [![mragetsars][xxx-img]][xxx-url]
-[![mragetsars][dic-img]][dic-url]
 [![mragetsars][ins-img]][ins-url]
 [![mragetsars][pri-img]][pri-url]
 [![mragetsars][red-img]][red-url]
-[![mragetsars][sky-img]][sky-url]
 [![mragetsars][tik-img]][tik-url]
 
 [dic-img]: http://img.shields.io/badge/Discord-navy.svg?style=flat-square
 [dic-url]: https://circleci.com/gh/algolia/instantsearch
 [ins-img]: http://img.shields.io/badge/Instagram-purple.svg?style=flat-square
-[ins-url]: https://circleci.com/gh/algolia/instantsearch
+[ins-url]: https://instagram.com/mragetsars
 [tel-img]: http://img.shields.io/badge/Telegram-blue.svg?style=flat-square
-[tel-url]: https://circleci.com/gh/algolia/instantsearch
+[tel-url]: https://t.me/mragetsars_channel
 [pri-img]: http://img.shields.io/badge/Printrest-crimson.svg?style=flat-square
-[pri-url]: https://circleci.com/gh/algolia/instantsearch
+[pri-url]: https://www.pinterest.com/mragetsars
 [red-img]: http://img.shields.io/badge/Reddit-red.svg?style=flat-square
-[red-url]: https://circleci.com/gh/algolia/instantsearch
+[red-url]: https://www.reddit.com/u/mragetsars
 [sky-img]: http://img.shields.io/badge/Skype-blue.svg?style=flat-square
 [sky-url]: https://circleci.com/gh/algolia/instantsearch
 [tik-img]: http://img.shields.io/badge/TikTok-black.svg?style=flat-square
-[tik-url]: https://circleci.com/gh/algolia/instantsearch
+[tik-url]: https://tiktok.com/@mragetsars
 [xxx-img]: http://img.shields.io/badge/X-black.svg?style=flat-square
-[xxx-url]: https://circleci.com/gh/algolia/instantsearch
+[xxx-url]: https://x.com/mragetsars
