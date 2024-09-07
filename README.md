@@ -3,9 +3,9 @@
 # 📬 Contact Me
 
 <div align="center">
-<!--   <a href="https://github.com/mragetsars">
+  <a href="https://github.com/mragetsars">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a> -->
+  </a>
 <!--     <a href="mailto:mragetsars@yahoo.com">
     <img src="https://img.shields.io/badge/Yahoo_Mail-6001D2?style=for-the-badge&logo=yahoo&logoColor=white" alt="Yahoo Mail">
   </a> -->
@@ -33,9 +33,9 @@
   <a href="https://youtube.com/@mragetsars">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
   </a>
-<!--       <a href="https://www.threads.net/@mragetsars">
+      <a href="https://www.threads.net/@mragetsars">
     <img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads">
-  </a> -->
+  </a>
   <a href="https://www.facebook.com/mragetsars">
     <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook">
   </a>
