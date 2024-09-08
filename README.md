@@ -1,4 +1,4 @@
-<h3 align="center"><img width="500" style="border-radius:5px;" alt="banner" src="https://raw.githubusercontent.com/mrastegars/mrastegars/main/banner.png"></h3>
+<h3 align="center"><img width="500" style="border-radius:5px;" alt="banner" src="https://raw.githubusercontent.com/mragetsars/mragetsars/main/banner.png"></h3>
 
 ## 📬 Contact Me
 
