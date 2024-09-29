@@ -24,7 +24,7 @@
     <a href="https://www.snapchat.com/add/mragetsars">
     <img src="https://img.shields.io/badge/Snapchat-FFFC00?style=for-the-badge&logo=snapchat&logoColor=black" alt="Snapchat">
   </a>
-  <a href="https://www.reddit.com/u/mragetsars">
+  <a href="https://www.reddit.com/u/-mragetsars">
     <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit">
   </a>
   <a href="https://tiktok.com/@mragetsars">
