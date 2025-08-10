@@ -6,9 +6,9 @@
   <a href="https://github.com/mragetsars">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
-<!--     <a href="mailto:mragetsars@yahoo.com">
+  <a href="mailto:mragetsars@yahoo.com">
     <img src="https://img.shields.io/badge/Yahoo_Mail-6001D2?style=for-the-badge&logo=yahoo&logoColor=white" alt="Yahoo Mail">
-  </a> -->
+  </a>
     <a href="https://t.me/mragetsars_bot">
     <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
   </a>
