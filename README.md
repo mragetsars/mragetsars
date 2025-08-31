@@ -1,9 +1,12 @@
 <h3 align="center"><img width="500" style="border-radius:5px;" alt="banner" src="https://raw.githubusercontent.com/mragetsars/mragetsars/main/banner.png"></h3>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=30&pause=1000&color=29903B&center=true&vCenter=true&width=435&lines=I'm+Mardas+Ragetsar;Welcome+to+my+GitHub" alt="Typing SVG" />
+</p>
+
 ## 📬 Contact Me
 
 <div align="center">
-  <!-- بخش کاری و اصلی -->
   <a href="https://github.com/mragetsars">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
@@ -13,8 +16,6 @@
   <!--     <a href="mailto:mragetsars@yahoo.com">
     <img src="https://img.shields.io/badge/Yahoo_Mail-6001D2?style=for-the-badge&logo=yahoo&logoColor=white" alt="Yahoo Mail">
   </a> -->
-
-  <!-- شبکه‌های اجتماعی اصلی -->
   <a href="https://x.com/mragetsars">
     <img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter">
   </a>
@@ -27,8 +28,6 @@
   <a href="https://www.facebook.com/mragetsars">
     <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook">
   </a>
-
-  <!-- پلتفرم‌های سرگرمی و رسانه -->
   <a href="https://youtube.com/@mragetsars">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
   </a>
