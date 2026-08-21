@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 440" width="1120" height="440" role="img" aria-labelledby="title desc">
+<title id="title">Meraj Rastegar neofetch-style GitHub profile</title>
+<desc id="desc">A neofetch-inspired terminal scene using a compact ASCII logo derived from the user's logo. The prompt is already present, neofetch is typed with a moving cursor, the output appears nearly instantly, and a fresh prompt returns below.</desc>
+<style>
+.terminal{font-family:"Ubuntu Mono","DejaVu Sans Mono","Liberation Mono","Courier New",monospace;font-size:17px;font-weight:400;font-variant-ligatures:none;letter-spacing:0;text-rendering:geometricPrecision}
+.prompt,.accent,.title,.logo{fill:#29903B}
+.value{fill:#24292F}
+.prompt,.title,.logo,.label{font-weight:700}
+.cursor{fill:#24292F}
+@keyframes blink{0%,48%{opacity:1}49%,100%{opacity:0}}
+.blink{animation:blink .95s steps(1,end) infinite}
+@media(prefers-reduced-motion:reduce){.blink{animation:none;opacity:1}}
+</style>
+
+  <defs>
+    <clipPath id="cmd-clip">
+      <rect x="186.80" y="19.0" width="0" height="24">
+        <animate attributeName="width" dur="1.00s" values="0.00;9.55;19.10;28.65;38.20;47.75;57.30;66.85;76.40" keyTimes="0.000000;0.360000;0.440000;0.520000;0.600000;0.680000;0.760000;0.840000;0.920000" calcMode="discrete" fill="freeze"/>
+      </rect>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#cmd-clip)">
+    <text x="186.80" y="37" class="terminal value">neofetch</text>
+  </g>
+
+<text x="34" y="37" class="terminal prompt">mrage@github:~$ </text>
+
+<rect x="186.80" y="23.5" width="9" height="17" class="cursor blink" fill="#24292F">
+    <animate attributeName="x" dur="1.00s" values="186.80;196.35;205.90;215.45;225.00;234.55;244.10;253.65;263.20" keyTimes="0.000000;0.360000;0.440000;0.520000;0.600000;0.680000;0.760000;0.840000;0.920000" calcMode="discrete" fill="freeze"/>
+    <set attributeName="visibility" to="hidden" begin="1.00s"/>
+  </rect>
+<g opacity="0">
+    <set attributeName="opacity" to="1" begin="1.08s"/>
+    <text x="50" y="78.0" class="terminal logo" xml:space="preserve">       +%.           .-++**+-.</text> <text x="50" y="96.3" class="terminal logo" xml:space="preserve">     :#@@+        :+#%@@@@@@@%=</text> <text x="50" y="114.6" class="terminal logo" xml:space="preserve">    +%@@@%-     -*@@@@@@@@@@@@@-</text> <text x="50" y="132.9" class="terminal logo" xml:space="preserve">   *@@@@@@%-  .*@@@@@@@@@@@@@@%:</text> <text x="50" y="151.2" class="terminal logo" xml:space="preserve">  *@@@@@@@@@*=%@@@@@@@@@@@@@@%:</text> <text x="50" y="169.5" class="terminal logo" xml:space="preserve"> *@@@@@@@@@@@@@@@@@@@@@@@@@%+</text> <text x="50" y="187.8" class="terminal logo" xml:space="preserve">-@@@@@@@@@@@@@@@@@@@@@@@@@@%#=</text> <text x="50" y="206.1" class="terminal logo" xml:space="preserve">#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#.</text> <text x="50" y="224.4" class="terminal logo" xml:space="preserve">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#</text> <text x="50" y="242.7" class="terminal logo" xml:space="preserve">%@@@@@@@@@@@@@@@#*+*#@@@@@@@@@@@</text> <text x="50" y="261.0" class="terminal logo" xml:space="preserve">*@@@@@@@@@@@@@*:     =%@@@@@@@@#</text> <text x="50" y="279.3" class="terminal logo" xml:space="preserve">:%@@@@@@@@@@#-        #@@@@@@@%.</text> <text x="50" y="297.6" class="terminal logo" xml:space="preserve"> :#@@@@@@@%=         .%@@@@@@*.</text> <text x="50" y="315.9" class="terminal logo" xml:space="preserve">   :+***+-          :#@@@@%*-</text> <text x="50" y="334.2" class="terminal logo" xml:space="preserve">                 .=#%%#*+-.</text>
+    <text x="430" y="92.0" class="terminal title">mrage@github</text> <text x="430" y="110.3" class="terminal accent">------------</text>
+    <text x="430" y="128.6" class="terminal"><tspan class="accent label">OS:</tspan><tspan class="value"> GitHub Profile</tspan></text> <text x="430" y="146.9" class="terminal"><tspan class="accent label">Host:</tspan><tspan class="value"> University of Tehran</tspan></text> <text x="430" y="165.2" class="terminal"><tspan class="accent label">Kernel:</tspan><tspan class="value"> Computer Engineering Student</tspan></text> <text x="430" y="183.5" class="terminal"><tspan class="accent label">Packages:</tspan><tspan class="value"> 33 repositories</tspan></text> <text x="430" y="201.8" class="terminal"><tspan class="accent label">Shell:</tspan><tspan class="value"> bash</tspan></text> <text x="430" y="220.1" class="terminal"><tspan class="accent label">Terminal:</tspan><tspan class="value"> GitHub README</tspan></text> <text x="430" y="238.4" class="terminal"><tspan class="accent label">Languages:</tspan><tspan class="value"> Python, C, C++, Java, SQL</tspan></text> <text x="430" y="256.7" class="terminal"><tspan class="accent label">Focus:</tspan><tspan class="value"> Data Science, AI, Systems</tspan></text> <text x="430" y="275.0" class="terminal"><tspan class="accent label">Projects:</tspan><tspan class="value"> Mardas-Folio, NYC Pipeline</tspan></text> <text x="430" y="293.3" class="terminal"><tspan class="accent label">Labs:</tspan><tspan class="value"> MOL Compiler, xv6</tspan></text> <text x="430" y="311.6" class="terminal"><tspan class="accent label">Stars:</tspan><tspan class="value"> 62</tspan></text>
+  </g>
+<g opacity="0">
+    <set attributeName="opacity" to="1" begin="1.17s"/>
+    <text x="34" y="416" class="terminal prompt">mrage@github:~$ </text>
+  </g>
+  <rect x="186.80" y="402.5" width="9" height="17" class="cursor blink" fill="#24292F" opacity="0">
+    <set attributeName="opacity" to="1" begin="1.17s"/>
+  </rect>
+</svg>
