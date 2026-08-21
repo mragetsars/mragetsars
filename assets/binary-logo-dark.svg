@@ -11,50 +11,51 @@
     .row {
       fill: #3FB950;
       font-family: "Courier New", "Liberation Mono", monospace;
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 900;
-      letter-spacing: 8.8px;
-      animation: reveal .55s ease-out both;
+      letter-spacing: 8.6px;
+      opacity: 0;
+      animation: boot .5s ease-out forwards;
     }
 
-  .r0 { animation-delay: 0.000s; }
-  .r1 { animation-delay: 0.035s; }
-  .r2 { animation-delay: 0.070s; }
-  .r3 { animation-delay: 0.105s; }
-  .r4 { animation-delay: 0.140s; }
-  .r5 { animation-delay: 0.175s; }
-  .r6 { animation-delay: 0.210s; }
-  .r7 { animation-delay: 0.245s; }
-  .r8 { animation-delay: 0.280s; }
-  .r9 { animation-delay: 0.315s; }
-  .r10 { animation-delay: 0.350s; }
-  .r11 { animation-delay: 0.385s; }
-  .r12 { animation-delay: 0.420s; }
-  .r13 { animation-delay: 0.455s; }
-  .r14 { animation-delay: 0.490s; }
-  .r15 { animation-delay: 0.525s; }
-  .r16 { animation-delay: 0.560s; }
-  .r17 { animation-delay: 0.595s; }
-  .r18 { animation-delay: 0.630s; }
-  .r19 { animation-delay: 0.665s; }
-  .r20 { animation-delay: 0.700s; }
-  .r21 { animation-delay: 0.735s; }
-  .r22 { animation-delay: 0.770s; }
-  .r23 { animation-delay: 0.805s; }
-  .r24 { animation-delay: 0.840s; }
-  .r25 { animation-delay: 0.875s; }
-  .r26 { animation-delay: 0.910s; }
-  .r27 { animation-delay: 0.945s; }
-  .r28 { animation-delay: 0.980s; }
-  .r29 { animation-delay: 1.015s; }
+    .r0 { animation-delay: 0.000s; }
+    .r1 { animation-delay: 0.028s; }
+    .r2 { animation-delay: 0.056s; }
+    .r3 { animation-delay: 0.084s; }
+    .r4 { animation-delay: 0.112s; }
+    .r5 { animation-delay: 0.140s; }
+    .r6 { animation-delay: 0.168s; }
+    .r7 { animation-delay: 0.196s; }
+    .r8 { animation-delay: 0.224s; }
+    .r9 { animation-delay: 0.252s; }
+    .r10 { animation-delay: 0.280s; }
+    .r11 { animation-delay: 0.308s; }
+    .r12 { animation-delay: 0.336s; }
+    .r13 { animation-delay: 0.364s; }
+    .r14 { animation-delay: 0.392s; }
+    .r15 { animation-delay: 0.420s; }
+    .r16 { animation-delay: 0.448s; }
+    .r17 { animation-delay: 0.476s; }
+    .r18 { animation-delay: 0.504s; }
+    .r19 { animation-delay: 0.532s; }
+    .r20 { animation-delay: 0.560s; }
+    .r21 { animation-delay: 0.588s; }
+    .r22 { animation-delay: 0.616s; }
+    .r23 { animation-delay: 0.644s; }
+    .r24 { animation-delay: 0.672s; }
+    .r25 { animation-delay: 0.700s; }
+    .r26 { animation-delay: 0.728s; }
+    .r27 { animation-delay: 0.756s; }
+    .r28 { animation-delay: 0.784s; }
+    .r29 { animation-delay: 0.812s; }
 
-    @keyframes reveal {
-      from { opacity: 0; transform: translateY(3px); }
+    @keyframes boot {
+      from { opacity: 0; transform: translateY(4px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .row { animation: none; }
+      .row { animation: none; opacity: 1; }
     }
   </style>
 

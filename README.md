@@ -18,3 +18,17 @@
          src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=30&pause=1000&color=29903B&center=true&vCenter=true&width=435&lines=I'm+Meraj+Rastegar;Welcome+to+my+GitHub">
   </picture>
 </p>
+
+<br>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"
+            srcset="https://raw.githubusercontent.com/mragetsars/mragetsars/main/assets/terminal-prompt-dark.svg">
+    <source media="(prefers-color-scheme: light)"
+            srcset="https://raw.githubusercontent.com/mragetsars/mragetsars/main/assets/terminal-prompt-light.svg">
+    <img width="420"
+         alt="Terminal prompt"
+         src="https://raw.githubusercontent.com/mragetsars/mragetsars/main/assets/terminal-prompt-light.svg">
+  </picture>
+</p>
