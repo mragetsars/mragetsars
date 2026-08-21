@@ -12,7 +12,7 @@
       fill: #3FB950;
       font-family: "Courier New", "Liberation Mono", monospace;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: 8.8px;
       animation: reveal .55s ease-out both;
     }
