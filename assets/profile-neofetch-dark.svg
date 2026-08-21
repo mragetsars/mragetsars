@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 468" width="1180" height="468" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 468" width="1040" height="468" role="img" aria-labelledby="title desc">
 <title id="title">Meraj Rastegar neofetch-style GitHub profile</title>
 <desc id="desc">A neofetch-inspired terminal scene using the v8 ASCII logo silhouette, scaled slightly larger for vertical balance. The prompt is already present, neofetch is typed with a moving cursor, the output appears nearly instantly, and a fresh prompt returns below.</desc>
 <style>
@@ -14,17 +14,17 @@
 
   <defs>
     <clipPath id="cmd-clip">
-      <rect x="197.60" y="21.0" width="0" height="25">
+      <rect x="248.10" y="21.0" width="0" height="25">
         <animate attributeName="width" dur="1.00s" values="0.00;10.10;20.20;30.30;40.40;50.50;60.60;70.70;80.80" keyTimes="0.000000;0.360000;0.440000;0.520000;0.600000;0.680000;0.760000;0.840000;0.920000" calcMode="discrete" fill="freeze"/>
       </rect>
     </clipPath>
   </defs>
   <g clip-path="url(#cmd-clip)">
-    <text x="197.60" y="39" class="terminal value">neofetch</text>
+    <text x="248.10" y="39" class="terminal value">neofetch</text>
   </g>
-<text x="36" y="39" class="terminal prompt">mrage@github:~$ </text>
-<rect x="197.60" y="24.8" width="9.4" height="18" class="cursor blink" fill="#C9D1D9">
-    <animate attributeName="x" dur="1.00s" values="197.60;207.70;217.80;227.90;238.00;248.10;258.20;268.30;278.40" keyTimes="0.000000;0.360000;0.440000;0.520000;0.600000;0.680000;0.760000;0.840000;0.920000" calcMode="discrete" fill="freeze"/>
+<text x="36" y="39" class="terminal prompt">mragetsars@github:~$ </text>
+<rect x="248.10" y="24.8" width="9.4" height="18" class="cursor blink" fill="#C9D1D9">
+    <animate attributeName="x" dur="1.00s" values="248.10;258.20;268.30;278.40;288.50;298.60;308.70;318.80;328.90" keyTimes="0.000000;0.360000;0.440000;0.520000;0.600000;0.680000;0.760000;0.840000;0.920000" calcMode="discrete" fill="freeze"/>
     <set attributeName="visibility" to="hidden" begin="1.00s"/>
   </rect>
 <g opacity="0">
@@ -38,9 +38,9 @@
   </g>
 <g opacity="0">
     <set attributeName="opacity" to="1" begin="1.18s"/>
-    <text x="36" y="444" class="terminal prompt">mrage@github:~$ </text>
+    <text x="36" y="444" class="terminal prompt">mragetsars@github:~$ </text>
   </g>
-  <rect x="197.60" y="429.8" width="9.4" height="18" class="cursor blink" fill="#C9D1D9" opacity="0">
+  <rect x="248.10" y="429.8" width="9.4" height="18" class="cursor blink" fill="#C9D1D9" opacity="0">
     <set attributeName="opacity" to="1" begin="1.18s"/>
   </rect>
 </svg>
