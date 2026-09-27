@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-09-27",
+  "user": {
+    "login": "mragetsars",
+    "bio": "Computer Engineering Student",
+    "company": "University of Tehran",
+    "location": "Tehran, Iran",
+    "blog": "https://t.me/mragetsars_bot",
+    "followers": 28
+  },
+  "repositories": [
+    {
+      "id": 1277218822,
+      "name": "Amazon-Food-Reviews-Clustering",
+      "description": "a Python and Jupyter Notebook implementation of unsupervised text clustering for Amazon Fine Food Reviews, including preprocessing, Sentence Transformer embeddings, K-Means, DBSCAN, Hierarchical Clustering, dimensionality reduction, and evaluation. This project was developed as the Fifth Computer Assignment for the Artificial Intelligence course at",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-22T17:35:23Z"
+    },
+    {
+      "id": 1279703933,
+      "name": "Applied-Predictive-Modeling-And-Ranking",
+      "description": "A Python and Jupyter Notebook implementation of applied predictive modeling and learning-to-rank pipelines, including fraud detection, article-share prediction, and candidate ranking. Developed as the Third Computer Assignment for the Data Science course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-25T00:15:06Z"
+    },
+    {
+      "id": 1151711316,
+      "name": "Automated-Logic-Synthesis",
+      "description": "the Automated Synthesis and Technology Mapping of a Hash Generator System. This project was developed as the Fourth Assignment of the Computer-Aided Design of Digital Systems (CAD) course at the University of Tehran.",
+      "language": "",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-11T22:40:07Z"
+    },
+    {
+      "id": 1277335094,
+      "name": "Bayesian-Estimation-Joint-Distribution-Correlation",
+      "description": "a Python and Jupyter Notebook implementation of Bayesian estimation, queue-system joint distribution analysis, and correlation/causality analysis. This project was developed as the Second Computer Assignment for the Engineering Probability and Statistics course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-22T19:58:03Z"
+    },
+    {
+      "id": 1151682695,
+      "name": "Bit-Serial-Matrix-Vector-Multiplier",
+      "description": "the Register Transfer Level (RTL) implementation of a Bit-Serial Matrix-Vector Multiplication Unit, inspired by the Stripes Accelerator architecture. This project was developed as the Second Assignment of the Computer-Aided Design of Digital Systems (CAD) course at the University of Tehran.",
+      "language": "Verilog",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-21T17:12:26Z"
+    },
+    {
+      "id": 1277336305,
+      "name": "Central-Limit-Theorem-and-Parameter-Estimation",
+      "description": "a Python and Jupyter Notebook implementation of central-limit-theorem experiments, MSE-based parameter estimation, and binomial normal approximation. This project was developed as the Third Computer Assignment for the Engineering Probability and Statistics course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-22T19:59:38Z"
+    },
+    {
+      "id": 1279707328,
+      "name": "Deep-Learning-Workflows-for-Data-Science",
+      "description": "Python and Jupyter Notebook implementation of three deep learning workflows: MLP regression, CNN image classification with robustness and Grad-CAM analysis, and RNN/LSTM knowledge tracing. Developed as the Fourth Assignment for the Introduction to Data Science course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-25T00:22:00Z"
+    },
+    {
+      "id": 1276410600,
+      "name": "Genetic-Puzzle-Solver-and-Minimax-Game-AI",
+      "description": "a Python and Jupyter Notebook implementation of permutation-based jigsaw puzzle reconstruction with a genetic algorithm and Dots and Boxes game search with Minimax and alpha-beta pruning. This project was developed as the Second Computer Assignment for the Artificial Intelligence course at the University of Tehran.",
+      "language": "HTML",
+      "stars": 1,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-22T00:19:36Z"
+    },
+    {
+      "id": 1151556910,
+      "name": "Hash-Generator-RTL-Design",
+      "description": "the Register Transfer Level (RTL) implementation of a Hash Generator System. This project was developed as the First Project of the Computer-Aided Design of Digital Systems (CAD) course at the University of Tehran.",
+      "language": "Verilog",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-21T16:34:41Z"
+    },
+    {
+      "id": 1126936895,
+      "name": "LIF-Spiking-Neuron-RTL-Design",
+      "description": "the Register Transfer Level (RTL) implementation of a Leaky Integrate-and-Fire (LIF) Spiking Neuron. This project was developed as the First Assignment for the Computer Architecture course at the University of Tehran.",
+      "language": "Verilog",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-06T12:48:10Z"
+    },
+    {
+      "id": 770624848,
+      "name": "Linux-Tree",
+      "description": "If I'm not mistaken, this is a representation of the folder structure in the Linux terminal, which is similar to a tree.",
+      "language": "C++",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2024-07-28T15:59:12Z"
+    },
+    {
+      "id": 1151711767,
+      "name": "Logic-Synthesis-of-Hash-Generator",
+      "description": "the Structural Implementation and Logic Synthesis of a Hash Generator System. This project was developed as the Third Assignment of the Computer-Aided Design of Digital Systems (CAD) course at the University of Tehran.",
+      "language": "Verilog",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-21T17:21:59Z"
+    },
+    {
+      "id": 1237134350,
+      "name": "Mardas-Folio",
+      "description": "A Python-based Markdown-to-PDF publishing tool for Persian, English, and mixed RTL/LTR technical documents, with CLI, browser-based Studio, Book Mode, citations, cross-references, and Chromium rendering.",
+      "language": "Python",
+      "stars": 3,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-08-24T05:18:28Z"
+    },
+    {
+      "id": 1127257252,
+      "name": "MIPS-MultiCycle-Processor",
+      "description": "the Register Transfer Level (RTL) implementation of a Multi-Cycle MIPS Processor. This project was developed as the Third Assignment for the Computer Architecture course at the University of Tehran.",
+      "language": "Verilog",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-06T12:47:59Z"
+    },
+    {
+      "id": 1314242450,
+      "name": "MOL-Compiler-Labs",
+      "description": "A four-phase educational compiler for the MOL language, covering parsing, AST construction, semantic analysis, and Jasmin/JVM code generation.",
+      "language": "Java",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-07-27T20:45:03Z"
+    },
+    {
+      "id": 769246183,
+      "name": "mragetsars",
+      "description": "Config files for my GitHub profile.",
+      "language": "",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-08-21T11:59:19Z"
+    },
+    {
+      "id": 1320325563,
+      "name": "NYC-Redfin-Price-Prediction-Pipeline",
+      "description": "Python data science and MLOps pipeline for NYC Redfin price prediction with Selenium, SQLite, gradient-boosting ensembles, Docker, and Kubernetes. Final Project for Introduction to Data Science at the University of Tehran.",
+      "language": "Python",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-08-02T16:04:57Z"
+    },
+    {
+      "id": 1276397423,
+      "name": "Pac-Man-Search-Algorithms",
+      "description": "a Python and Jupyter Notebook implementation of informed and uninformed Pac-Man path-planning algorithms, including BFS, DFS, IDS, A*, Weighted A*, and heuristic comparison. Developed as the First Assignment for the Artificial Intelligence course at the University of Tehran.",
+      "language": "Python",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-21T23:45:35Z"
+    },
+    {
+      "id": 831840323,
+      "name": "Plants-VS-Zombies",
+      "description": "a fan-made implementation of the classic Plants vs. Zombies game, developed in C++ using the SFML multimedia library. This project was carried out as the Fifth Assignment for the Advanced Programming course at the University of Tehran.",
+      "language": "C++",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-05T17:55:12Z"
+    },
+    {
+      "id": 1279703129,
+      "name": "Restaurant-Order-Data-Engineering-Pipeline",
+      "description": "A Python, Kafka, PySpark, and PostgreSQL data-engineering pipeline for restaurant order validation, batch analytics, streaming fraud detection, and cuisine-level operational metrics. Developed as the Second Computer Assignment for the Data Science course at the University of Tehran.",
+      "language": "Python",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-25T00:13:24Z"
+    },
+    {
+      "id": 1126980525,
+      "name": "RISC-V-Pipeline-Processor",
+      "description": "the Register Transfer Level (RTL) implementation of a Pipelined RISC-V Processor . This project was developed as the Fourth Assignment for the Computer Architecture course at the University of Tehran.",
+      "language": "Verilog",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-06T12:47:53Z"
+    },
+    {
+      "id": 1127270166,
+      "name": "RISC-V-SingleCycle-Processor",
+      "description": "the Register Transfer Level (RTL) implementation of a Single-Cycle RISC-V Processor. This project was developed as the Second Assignment for the Computer Architecture course at the University of Tehran.",
+      "language": "Verilog",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-06T12:48:04Z"
+    },
+    {
+      "id": 1277191000,
+      "name": "SnappFood-Sentiment-CNN",
+      "description": "a Python and Jupyter Notebook implementation of Persian SnappFood sentiment classification with PyTorch, including Persian preprocessing, FastText-compatible embeddings, CNN training, and test-set evaluation. This project was developed as the Fourth Assignment for the Artificial Intelligence course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-22T17:04:39Z"
+    },
+    {
+      "id": 1283461958,
+      "name": "Stardew-Valley-Mini-Game",
+      "description": "a Stardew Valley-inspired farming simulation game, developed in C++ using the SFML multimedia library. This project was carried out as the Fifth Assignment for the Advanced Programming course at the University of Tehran.",
+      "language": "C++",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-07-06T06:03:38Z"
+    },
+    {
+      "id": 1277331678,
+      "name": "Statistical-Distributions-and-Random-Variable-Transformations",
+      "description": "An R and Jupyter Notebook implementation of statistical-distribution simulations, binomial-normal approximation analysis, exponential memorylessness, and random-variable transformations. This project was developed as the First Computer Assignment for the Engineering Probability and Statistics course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-22T19:53:36Z"
+    },
+    {
+      "id": 1277333684,
+      "name": "Statistical-Learning-and-Probabilistic-Classification",
+      "description": "a Python and Jupyter Notebook implementation of NumPy exercises, Condorcet-style majority-vote analysis, and Naive Bayes spam-email classification. This project was developed as Computer Assignment Zero for the Engineering Probability and Statistics course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-22T19:56:07Z"
+    },
+    {
+      "id": 1279659953,
+      "name": "Statistical-Sampling-BI-Dashboard-Analytics",
+      "description": "A Python/Jupyter, Tableau, and Power BI data science project covering statistical sampling with Langevin Dynamics, global Tuberculosis dashboard storytelling, and financial dashboard improvement. Developed as the First Assignment for the Introduction to Data Science course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-24T22:42:22Z"
+    },
+    {
+      "id": 1218311708,
+      "name": "Terminal-Based-Full-Duplex-Chat",
+      "description": "the C programming language implementation for a secure, two-way Chat Room in the terminal. This project was developed as the First Project of the Operating Systems (OS) course at the University of Tehran.",
+      "language": "C",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-04-25T21:08:11Z"
+    },
+    {
+      "id": 770055654,
+      "name": "TETRIS",
+      "description": "A console-based implementation of the classic Tetris game, developed in C with keyboard-driven terminal input. This project was carried out as the Second Project for the Basic Programming course at the University of Tehran.",
+      "language": "C",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-07-07T06:42:46Z"
+    },
+    {
+      "id": 1163426212,
+      "name": "Timing-Algorithm-Implementation",
+      "description": "",
+      "language": "",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-02-21T16:07:04Z"
+    },
+    {
+      "id": 1237592660,
+      "name": "University-Teaching-Management-System",
+      "description": "University Teaching Management System (UTMS) is a terminal-and-web hybrid C++20 application designed to streamline university course management and academic social interactions. Developed as part of the Advanced Programming course at the University of Tehran, UTMS merges a robust educational management engine with a lightweight social-media layer.",
+      "language": "C++",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-05-23T00:15:36Z"
+    },
+    {
+      "id": 1277146377,
+      "name": "UT-Match-Machine-Learning-Services",
+      "description": "a Python and Jupyter Notebook implementation of UT-Match machine-learning services, including from-scratch decision trees, email classification, crisis-type classification, and exam-score regression. This project was developed as the Third Computer Assignment for the Artificial Intelligence course at the University of Tehran.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "fork": false,
+      "archived": false,
+      "pushed_at": "2026-06-22T16:14:56Z"
+    },
+    {
+      "id": 1309152520,
+      "name": "Xv6-Operating-System-Labs",
+      "description": "An academic collection of operating-system laboratory assignments built on the MIT xv6 x86 kernel, covering kernel development, system calls, process management, synchronization, memory management, and file-system concepts for the Operating Systems course at the University of Tehran.",
+      "language": "C",
+      "stars": 0,
+      "fork": true,
+      "archived": false,
+      "pushed_at": "2026-07-27T18:23:29Z"
+    }
+  ]
+}

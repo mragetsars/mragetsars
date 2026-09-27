@@ -1,0 +1,12 @@
+{
+  "username": "mragetsars",
+  "featured": [
+    {"id": 1237134350, "label": "Mardas Folio"},
+    {"id": 1320325563, "label": "NYC housing price pipeline"},
+    {"id": 1237592660, "label": "University Teaching Management System"},
+    {"id": 1314242450, "label": "MOL compiler"},
+    {"id": 1277191000, "label": "Persian sentiment analysis"},
+    {"id": 1126980525, "label": "Pipelined RISC-V processor"}
+  ],
+  "recent_limit": 3
+}

@@ -1,0 +1,89 @@
+name: Update profile
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - profile.json
+      - data/profile.json
+      - scripts/**
+      - tests/**
+      - assets/profile-neofetch-*.svg
+      - .github/workflows/update-profile.yml
+  pull_request:
+    paths:
+      - README.md
+      - profile.json
+      - data/profile.json
+      - scripts/**
+      - tests/**
+      - assets/profile-neofetch-*.svg
+      - .github/workflows/update-profile.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate profile
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Test generator and failure handling
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify the committed snapshot and README agree
+        run: python3 scripts/update_profile.py --offline --check
+
+  refresh:
+    name: Refresh public data
+    needs: validate
+    if: >-
+      github.repository == 'mragetsars/mragetsars' &&
+      github.event_name != 'pull_request' &&
+      github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the validated revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+      - name: Refresh from GitHub
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/update_profile.py
+      - name: Verify generated output
+        run: python3 scripts/update_profile.py --offline --check
+      - name: Commit changed output
+        env:
+          TARGET_BRANCH: main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- README.md data/profile.json
+          if git diff --cached --quiet; then
+            echo "No public profile changes." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore(profile): refresh public GitHub data'
+          if ! git push origin "HEAD:refs/heads/$TARGET_BRANCH"; then
+            echo 'Push failed. Check branch rules or rerun against the latest main; no force push was attempted.' >&2
+            exit 1
+          fi
+          echo "Public profile refreshed successfully." >> "$GITHUB_STEP_SUMMARY"
