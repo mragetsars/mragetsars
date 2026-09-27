@@ -64,6 +64,12 @@ class ProfileTests(unittest.TestCase):
         self.assertIn("**3 public repositories**", activity)
         self.assertIn("1 public non-fork project", activity)
 
+    def test_profile_push_time_does_not_create_self_induced_updates(self):
+        before = api_repo(name="mragetsars", pushed_at="2026-09-27T12:00:00Z")
+        after = {**before, "pushed_at": "2026-09-27T12:01:00Z"}
+        self.assertEqual(profile.normalize_repo(before, "mragetsars"),
+                         profile.normalize_repo(after, "mragetsars"))
+
     def test_repository_rename_keeps_featured_selection_and_updates_url(self):
         projects = profile.render_blocks(snapshot(api_repo(name="renamed")), CONFIG)["PROJECTS"]
         self.assertIn("https://github.com/mragetsars/renamed", projects)

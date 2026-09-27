@@ -123,7 +123,9 @@ def normalize_repo(raw: dict, username: str) -> dict | None:
     for key in ("fork", "archived"):
         if type(raw.get(key)) is not bool:
             raise ProfileError(f"Repository {name} has no valid {key} flag.")
-    pushed_at = raw.get("pushed_at")
+    # Refresh commits move this repository's push time. It is never displayed,
+    # so omit it rather than make each refresh generate another refresh commit.
+    pushed_at = None if name.lower() == username.lower() else raw.get("pushed_at")
     if pushed_at is not None:
         if not isinstance(pushed_at, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", pushed_at):
             raise ProfileError(f"Invalid push timestamp for {name}.")
