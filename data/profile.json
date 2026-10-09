@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-08",
+  "updated_on": "2026-10-09",
   "user": {
     "login": "mragetsars",
     "bio": "Computer Engineering Student",
@@ -125,7 +125,7 @@
       "name": "Logic-Synthesis-of-Hash-Generator",
       "description": "the Structural Implementation and Logic Synthesis of a Hash Generator System. This project was developed as the Third Assignment of the Computer-Aided Design of Digital Systems (CAD) course at the University of Tehran.",
       "language": "Verilog",
-      "stars": 0,
+      "stars": 1,
       "fork": false,
       "archived": false,
       "pushed_at": "2026-02-21T17:21:59Z"
