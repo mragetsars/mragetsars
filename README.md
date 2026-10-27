@@ -19,7 +19,7 @@ Some course projects are collaborative; each repository documents its scope and 
 
 <!-- PROJECTS:START -->
 - **[Mardas Folio](https://github.com/mragetsars/Mardas-Folio)** — A Python-based Markdown-to-PDF publishing tool for Persian, English, and mixed RTL/LTR technical documents, with CLI, browser-based Studio, Book Mode, citations, cross-references, and Chromium rendering.  
-  <sub>Python · 3 stars · Last push: 2026-08-24</sub>
+  <sub>Python · 3 stars · Last push: 2026-10-27</sub>
 
 - **[NYC housing price pipeline](https://github.com/mragetsars/NYC-Redfin-Price-Prediction-Pipeline)** — Python data science and MLOps pipeline for NYC Redfin price prediction with Selenium, SQLite, gradient-boosting ensembles, Docker, and Kubernetes.  
   <sub>Python · Last push: 2026-08-02</sub>
@@ -74,5 +74,5 @@ Stars received are counted across my 31 public non-fork project repositories (ex
 ---
 
 <!-- UPDATED:START -->
-<sub>Public GitHub data refreshed: 2026-10-26 (UTC). Scheduled daily · repository descriptions, primary languages, stars and push dates update automatically. [Refresh status](https://github.com/mragetsars/mragetsars/actions/workflows/update-profile.yml).</sub>
+<sub>Public GitHub data refreshed: 2026-10-27 (UTC). Scheduled daily · repository descriptions, primary languages, stars and push dates update automatically. [Refresh status](https://github.com/mragetsars/mragetsars/actions/workflows/update-profile.yml).</sub>
 <!-- UPDATED:END -->
