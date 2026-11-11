@@ -48,15 +48,15 @@ Some course projects are collaborative; each repository documents its scope and 
 ## Around my GitHub
 
 <!-- ACTIVITY:START -->
-**33 public repositories** · **27 followers** · **5 stars received**
+**34 public repositories** · **27 followers** · **6 stars received**
 
-Stars received are counted across my 31 public non-fork project repositories (excluding this profile repository).
+Stars received are counted across my 32 public non-fork project repositories (excluding this profile repository).
 
 **More projects with recent pushes**
 
+- [SWT F05 CA1](https://github.com/mragetsars/SWT-F05-CA1) — 2026-10-27
 - [TETRIS](https://github.com/mragetsars/TETRIS) — 2026-07-07
 - [Stardew Valley Mini Game](https://github.com/mragetsars/Stardew-Valley-Mini-Game) — 2026-07-06
-- [Deep Learning Workflows for Data Science](https://github.com/mragetsars/Deep-Learning-Workflows-for-Data-Science) — 2026-06-25
 <!-- ACTIVITY:END -->
 
 <details>
@@ -74,5 +74,5 @@ Stars received are counted across my 31 public non-fork project repositories (ex
 ---
 
 <!-- UPDATED:START -->
-<sub>Public GitHub data refreshed: 2026-11-10 (UTC). Scheduled daily · repository descriptions, primary languages, stars and push dates update automatically. [Refresh status](https://github.com/mragetsars/mragetsars/actions/workflows/update-profile.yml).</sub>
+<sub>Public GitHub data refreshed: 2026-11-11 (UTC). Scheduled daily · repository descriptions, primary languages, stars and push dates update automatically. [Refresh status](https://github.com/mragetsars/mragetsars/actions/workflows/update-profile.yml).</sub>
 <!-- UPDATED:END -->
