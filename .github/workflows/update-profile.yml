@@ -43,8 +43,10 @@ jobs:
           persist-credentials: false
       - name: Test generator and failure handling
         run: python3 -m unittest discover -s tests -v
-      - name: Verify the committed snapshot and README agree
+      - name: Verify the committed snapshot
         run: python3 scripts/update_profile.py --offline --check
+      - name: Verify the terminal cards agree with the snapshot
+        run: python3 scripts/render_neofetch.py --check
 
   refresh:
     name: Refresh public data
@@ -66,6 +68,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 scripts/update_profile.py
+      - name: Render terminal cards
+        run: python3 scripts/render_neofetch.py
       - name: Verify generated output
         run: python3 scripts/update_profile.py --offline --check
       - name: Commit changed output
@@ -74,7 +78,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- README.md data/profile.json
+          git add -- data/profile.json assets/profile-neofetch-dark.svg assets/profile-neofetch-light.svg
           if git diff --cached --quiet; then
             echo "No public profile changes." >> "$GITHUB_STEP_SUMMARY"
             exit 0

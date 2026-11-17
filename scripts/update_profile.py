@@ -327,11 +327,8 @@ def update(root: Path, *, offline: bool = False, check: bool = False) -> bool:
     snapshot_path = root / "data/profile.json"
     raw = json.loads(snapshot_path.read_text(encoding="utf-8")) if offline else collect(config)
     data = validate_snapshot(raw, config["username"])
-    readme_path = root / "README.md"
-    current = readme_path.read_text(encoding="utf-8")
-    rendered = replace_blocks(current, render_blocks(data, config))
     snapshot = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
-    files = [(readme_path, rendered), (snapshot_path, snapshot)]
+    files = [(snapshot_path, snapshot)]
     changed = [(path, content) for path, content in files
                if not path.exists() or path.read_text(encoding="utf-8") != content]
     # Every API call, validation and render has finished before any file is touched.
