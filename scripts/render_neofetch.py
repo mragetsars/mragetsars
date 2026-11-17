@@ -2,6 +2,8 @@
 """Render the profile card from the same public snapshot as the README."""
 import json
 import gzip
+import hashlib
+import re
 import textwrap
 from collections import Counter
 from pathlib import Path
@@ -40,7 +42,7 @@ with gzip.open(ROOT / 'assets/terminal-glyphs.json.gz', 'rt', encoding='utf-8') 
     glyphs = json.load(f)
 
 def render(dark):
-    bg, fg, muted, green = (('#0c0c0c', '#cccccc', '#cccccc', '#4ec95a') if dark else ('#ffffff', '#24292f', '#57606a', '#1a7f37'))
+    fg, muted, green = (('#cccccc', '#cccccc', '#4ec95a') if dark else ('#24292f', '#57606a', '#1a7f37'))
     # Glyph paths use the same metrics on every viewer, including GitHub's SVG
     # image renderer, without depending on fonts installed on the viewer.
     scale = 16 / 2048
@@ -84,15 +86,35 @@ def render(dark):
     height = 25 + (max(len(logo), len(output) + 3) - 1) * leading + 12
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="{height}" viewBox="0 0 1040 {height}" role="img" aria-labelledby="title desc">
 <title id="title">github@mragetsars — neofetch profile</title><desc id="desc">Mardas ASCII logo beside a terminal profile with public GitHub information and self-starred projects.</desc>
-<rect width="1040" height="{height}" fill="{bg}"/>{terminal}</svg>\n'''
+{terminal}</svg>\n'''
 
-changed = False
+expected = {}
+paths = {}
 for theme in ('dark', 'light'):
-    path = ROOT / 'assets' / f'profile-neofetch-{theme}.svg'
     content = render(theme == 'dark')
-    if not path.exists() or path.read_text(encoding='utf-8') != content:
-        changed = True
-        if '--check' not in sys.argv:
+    digest = hashlib.sha256(content.encode('utf-8')).hexdigest()[:12]
+    name = f'profile-neofetch-{theme}-{digest}.svg'
+    paths[theme] = name
+    expected[ROOT / 'assets' / name] = content
+
+readme_path = ROOT / 'README.md'
+readme = readme_path.read_text(encoding='utf-8')
+pattern = r'assets/profile-neofetch-(dark|light)(?:-[0-9a-f]{12})?\.svg'
+matches = re.findall(pattern, readme)
+if sorted(matches) != ['dark', 'light']:
+    raise SystemExit('README must reference exactly one dark and one light profile card.')
+updated_readme = re.sub(pattern, lambda m: 'assets/' + paths[m.group(1)], readme)
+expected[readme_path] = updated_readme
+stale = [p for p in (ROOT / 'assets').glob('profile-neofetch-*.svg')
+         if re.fullmatch(r'profile-neofetch-(?:dark|light)(?:-[0-9a-f]{12})?\.svg', p.name)
+         and p not in expected]
+changed = bool(stale) or any(not p.exists() or p.read_text(encoding='utf-8') != content
+                             for p, content in expected.items())
+if changed and '--check' not in sys.argv:
+    for path, content in expected.items():
+        if not path.exists() or path.read_text(encoding='utf-8') != content:
             path.write_text(content, encoding='utf-8')
+    for path in stale:
+        path.unlink()
 if changed and '--check' in sys.argv:
     raise SystemExit('Neofetch cards differ; run python3 scripts/render_neofetch.py')
