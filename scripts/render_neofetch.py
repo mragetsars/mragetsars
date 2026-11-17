@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Render the profile card from the same public snapshot as the README."""
-import html
 import json
+import gzip
 from collections import Counter
 from pathlib import Path
 import sys
@@ -43,39 +43,53 @@ rows += [('Pinned' if i == 0 else ' ', name.split('/', 1)[1] if name.lower().sta
 def fit(value, limit=38):
     return value if len(value) <= limit else value[:limit-1] + '…'
 
+with gzip.open(ROOT / 'assets/terminal-glyphs.json.gz', 'rt', encoding='utf-8') as f:
+    glyphs = json.load(f)
+
 def render(dark):
-    bg, bar, border, fg, muted, green = (('#0d1117', '#161b22', '#30363d', '#e6edf3', '#8b949e', '#56d364') if dark else ('#ffffff', '#f6f8fa', '#d0d7de', '#1f2328', '#656d76', '#1a7f37'))
-    e = html.escape
+    bg, fg, muted, green = (('#0c0c0c', '#cccccc', '#cccccc', '#4ec95a') if dark else ('#ffffff', '#24292f', '#57606a', '#1a7f37'))
+    # Glyph paths use the same metrics on every viewer, including GitHub's SVG
+    # image renderer, without depending on fonts installed on the viewer.
+    scale = 16 / 2048
+    advance = 1233 * scale
+    start_x, first_baseline, leading = 10, 19, 19
+
+    def draw(text, column, row, color):
+        chunks = []
+        for offset, char in enumerate(text):
+            path = glyphs.get(char, glyphs.get('?', ''))
+            if path:
+                x = start_x + (column + offset) * advance
+                y = first_baseline + row * leading
+                chunks.append(f'<path d="{path}" transform="translate({x:.3f} {y}) scale({scale:.8f} {-scale:.8f})"/>')
+        return f'<g fill="{color}">' + ''.join(chunks) + '</g>'
+
     username = data['user']['login']
     title = f'github@{username}'
     output = [(None, title), (None, '-' * len(title))] + rows
     lines = []
-    colors = ['#1e5f2d', '#267637', '#2e8d41', '#35a54b', '#3fb950', '#5ccc69', '#79dc85', '#9aebab']
+    colors = ['#0c0c0c', '#c50f1f', '#13a10e', '#c19c00', '#0037da', '#881798', '#3a96dd', '#cccccc',
+              '#767676', '#e74856', '#16c60c', '#f9f1a5', '#3b78ff', '#b4009e', '#61d6d6', '#f2f2f2']
     for i, line in enumerate(logo):
-        # One text element per terminal row: both columns share baseline,
-        # font and character grid, just like monospaced terminal output.
-        left = e(line.ljust(36))
-        right = ''
+        lines.append(draw(line, 0, i, green))
         if i < len(output):
             label, value = output[i]
             if label is None:
-                right = f'<tspan fill="{green if i == 0 else muted}">{e(value)}</tspan>'
+                lines.append(draw(value, 40, i, green if i == 0 else muted))
             else:
                 prefix = f'{label}: ' if label.strip() else '        '
-                right = (f'<tspan fill="{green}">{e(prefix)}</tspan>'
-                         f'<tspan fill="{fg}">{e(fit(value, 49-len(prefix)))}</tspan>')
-        elif i == len(output) + 1:
-            right = ''.join(f'<tspan fill="{c}">██</tspan>' for c in colors)
-        lines.append(f'<text x="40" y="{120+i*20}" xml:space="preserve"><tspan fill="{green}">{left}</tspan>{right}</text>')
+                lines.append(draw(prefix, 40, i, green))
+                lines.append(draw(fit(value, 57-len(prefix)), 40 + len(prefix), i, fg))
+        elif i in (len(output) + 1, len(output) + 2):
+            palette_row = i - len(output) - 1
+            for j in range(8):
+                x = start_x + (40 + j * 3) * advance
+                y = first_baseline + i * leading - 15
+                lines.append(f'<rect x="{x:.3f}" y="{y}" width="{3*advance:.3f}" height="{leading}" fill="{colors[palette_row*8+j]}"/>')
     terminal = ''.join(lines)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" role="img" aria-labelledby="title desc">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="310" viewBox="0 0 960 310" role="img" aria-labelledby="title desc">
 <title id="title">github@mragetsars — neofetch profile</title><desc id="desc">Mardas ASCII logo beside a terminal profile with public GitHub information and pinned repositories.</desc>
-<rect x="1" y="1" width="958" height="468" rx="14" fill="{bg}" stroke="{border}"/>
-<path d="M15 1H945A14 14 0 0 1 959 15V47H1V15A14 14 0 0 1 15 1Z" fill="{bar}"/><path d="M1 47H959" stroke="{border}"/>
-<g fill="{muted}"><circle cx="24" cy="24" r="4"/><circle cx="40" cy="24" r="4"/><circle cx="56" cy="24" r="4"/></g>
-<g font-family="DejaVu Sans Mono,Consolas,monospace"><text x="80" y="29" font-size="12" fill="{muted}">mragetsars@github: ~</text><text x="40" y="80" font-size="15" fill="{green}">❯ <tspan fill="{fg}">neofetch</tspan></text>
-<g font-size="16">{terminal}</g>
-<text x="40" y="448" font-size="14" fill="{green}">❯ <tspan fill="{muted}">_</tspan></text></g></svg>\n'''
+<rect width="960" height="310" fill="{bg}"/>{terminal}</svg>\n'''
 
 changed = False
 for theme in ('dark', 'light'):
