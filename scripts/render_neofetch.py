@@ -11,23 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/profile.json').read_text(encoding='utf-8'))
 repos = data['repositories']
 own = [r for r in repos if not r['fork'] and r['name'].lower() != data['user']['login'].lower()]
-logo = [
-    '       +%.           .-++**+-.',
-    '     :#@@+        :+#%@@@@@@@%=',
-    '    +%@@@%-     -*@@@@@@@@@@@@@-',
-    '   *@@@@@@%-  .*@@@@@@@@@@@@@@%:',
-    '  *@@@@@@@@@*=%@@@@@@@@@@@@@@%:',
-    ' *@@@@@@@@@@@@@@@@@@@@@@@@@%+',
-    '-@@@@@@@@@@@@@@@@@@@@@@@@@@%#=',
-    '#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#.',
-    '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#',
-    '%@@@@@@@@@@@@@@@#*+*#@@@@@@@@@@@',
-    '*@@@@@@@@@@@@@*:     =%@@@@@@@@#',
-    ':%@@@@@@@@@@#-        #@@@@@@@%.',
-    ' :#@@@@@@@%=         .%@@@@@@*.',
-    '   :+***+-          :#@@@@%*-',
-    '                 .=#%%#*+-.',
-]
+logo = (ROOT / 'assets/mardas-binary.txt').read_text(encoding='utf-8').splitlines()
 starred = json.loads((ROOT / 'data/starred.json').read_text(encoding='utf-8'))
 languages = Counter(r['language'] for r in own if r['language'])
 rows = [(label, data['user'][key]) for label, key in
@@ -45,7 +29,7 @@ rows += [
     ('Community', f"{data['user']['followers']} followers / {sum(r['stars'] for r in own)} stars"),
 ]
 project_lines = [part for name in starred for part in
-                 textwrap.wrap(name, width=47, break_on_hyphens=False)]
+                 textwrap.wrap(name, width=45, break_on_hyphens=False)]
 rows += ([('Projects' if i == 0 else ' ', line) for i, line in enumerate(project_lines)]
          if project_lines else [('Projects', 'No self-starred projects yet')])
 
@@ -85,22 +69,22 @@ def render(dark):
         if i < len(output):
             label, value = output[i]
             if label is None:
-                lines.append(draw(value, 40, i, green if i == 0 else muted))
+                lines.append(draw(value, 50, i, green if i == 0 else muted))
             else:
                 prefix = f'{label}: ' if label.strip() else '          '
-                lines.append(draw(prefix, 40, i, green))
-                lines.append(draw(fit(value, 57-len(prefix)), 40 + len(prefix), i, fg))
+                lines.append(draw(prefix, 50, i, green))
+                lines.append(draw(fit(value, 55-len(prefix)), 50 + len(prefix), i, fg))
         elif i in (len(output) + 1, len(output) + 2):
             palette_row = i - len(output) - 1
             for j in range(8):
-                x = start_x + (40 + j * 3) * advance
+                x = start_x + (50 + j * 3) * advance
                 y = first_baseline + i * leading - 15
                 lines.append(f'<rect x="{x:.3f}" y="{y}" width="{3*advance:.3f}" height="{leading}" fill="{colors[palette_row*8+j]}"/>')
     terminal = ''.join(lines)
     height = 25 + (max(len(logo), len(output) + 3) - 1) * leading + 12
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{height}" viewBox="0 0 960 {height}" role="img" aria-labelledby="title desc">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="{height}" viewBox="0 0 1040 {height}" role="img" aria-labelledby="title desc">
 <title id="title">github@mragetsars — neofetch profile</title><desc id="desc">Mardas ASCII logo beside a terminal profile with public GitHub information and self-starred projects.</desc>
-<rect width="960" height="{height}" fill="{bg}"/>{terminal}</svg>\n'''
+<rect width="1040" height="{height}" fill="{bg}"/>{terminal}</svg>\n'''
 
 changed = False
 for theme in ('dark', 'light'):

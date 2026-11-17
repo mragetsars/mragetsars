@@ -15,6 +15,7 @@ on:
       - tests/**
       - assets/profile-neofetch-*.svg
       - assets/terminal-glyphs.json.gz
+      - assets/mardas-binary.txt
       - .github/workflows/update-profile.yml
   pull_request:
     paths:
@@ -26,6 +27,7 @@ on:
       - tests/**
       - assets/profile-neofetch-*.svg
       - assets/terminal-glyphs.json.gz
+      - assets/mardas-binary.txt
       - .github/workflows/update-profile.yml
 
 permissions:
