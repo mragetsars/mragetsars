@@ -31,8 +31,14 @@ logo = [
 starred = json.loads((ROOT / 'data/starred.json').read_text(encoding='utf-8'))
 languages = Counter(r['language'] for r in own if r['language'])
 rows = [(label, data['user'][key]) for label, key in
-        [('Bio', 'bio'), ('Company', 'company'), ('Location', 'location')]
+        [('Bio', 'bio'), ('Company', 'company')]
         if data['user'][key]]
+recent = max((r for r in own if r['pushed_at'] and not r['archived']),
+             key=lambda r: (r['pushed_at'], r['name']), default=None)
+if recent:
+    name = recent['name']
+    name = name if len(name) <= 31 else name[:30] + '…'
+    rows.append(('Last push', f"{name} / {recent['pushed_at'][:10]}"))
 rows += [
     ('Languages', ' / '.join(name for name, _ in sorted(languages.items(), key=lambda p: (-p[1], p[0]))[:4]) or 'Not reported'),
     ('Repositories', f"{len(repos)} public"),
