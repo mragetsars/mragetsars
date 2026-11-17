@@ -10,7 +10,7 @@ on:
       - README.md
       - profile.json
       - data/profile.json
-      - data/pinned.json
+      - data/starred.json
       - scripts/**
       - tests/**
       - assets/profile-neofetch-*.svg
@@ -21,7 +21,7 @@ on:
       - README.md
       - profile.json
       - data/profile.json
-      - data/pinned.json
+      - data/starred.json
       - scripts/**
       - tests/**
       - assets/profile-neofetch-*.svg
@@ -72,10 +72,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 scripts/update_profile.py
-      - name: Refresh pinned repositories
+      - name: Refresh self-starred repositories
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python3 scripts/update_pins.py
+        run: python3 scripts/update_starred.py
       - name: Render terminal cards
         run: python3 scripts/render_neofetch.py
       - name: Verify generated output
@@ -86,7 +86,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- data/profile.json data/pinned.json assets/profile-neofetch-dark.svg assets/profile-neofetch-light.svg
+          git add -- data/profile.json data/starred.json assets/profile-neofetch-dark.svg assets/profile-neofetch-light.svg
           if git diff --cached --quiet; then
             echo "No public profile changes." >> "$GITHUB_STEP_SUMMARY"
             exit 0

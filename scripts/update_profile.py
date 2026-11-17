@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 from datetime import date, datetime, timezone
 import html
+from http.client import IncompleteRead
 import json
 import os
 from pathlib import Path
@@ -53,7 +54,7 @@ def get_json(path: str):
             )
             if not retryable or attempt == 2:
                 raise ProfileError(f"GitHub API returned HTTP {exc.code}; saved files were not changed.") from None
-        except (URLError, TimeoutError, OSError):
+        except (URLError, TimeoutError, OSError, IncompleteRead):
             if attempt == 2:
                 raise ProfileError("GitHub API could not be reached; saved files were not changed.") from None
         except (json.JSONDecodeError, UnicodeError):

@@ -2,6 +2,7 @@
 """Render the profile card from the same public snapshot as the README."""
 import json
 import gzip
+import textwrap
 from collections import Counter
 from pathlib import Path
 import sys
@@ -27,7 +28,7 @@ logo = [
     '   :+***+-          :#@@@@%*-',
     '                 .=#%%#*+-.',
 ]
-pins = json.loads((ROOT / 'data/pinned.json').read_text(encoding='utf-8'))
+starred = json.loads((ROOT / 'data/starred.json').read_text(encoding='utf-8'))
 languages = Counter(r['language'] for r in own if r['language'])
 rows = [(label, data['user'][key]) for label, key in
         [('Bio', 'bio'), ('Company', 'company'), ('Location', 'location')]
@@ -37,8 +38,10 @@ rows += [
     ('Repositories', f"{len(repos)} public"),
     ('Community', f"{data['user']['followers']} followers / {sum(r['stars'] for r in own)} stars"),
 ]
-rows += [('Pinned' if i == 0 else ' ', name.split('/', 1)[1] if name.lower().startswith(data['user']['login'].lower() + '/') else name)
-         for i, name in enumerate(pins[:2])]
+project_lines = [part for name in starred for part in
+                 textwrap.wrap(name, width=47, break_on_hyphens=False)]
+rows += ([('Projects' if i == 0 else ' ', line) for i, line in enumerate(project_lines)]
+         if project_lines else [('Projects', 'No self-starred projects yet')])
 
 def fit(value, limit=38):
     return value if len(value) <= limit else value[:limit-1] + '…'
@@ -70,14 +73,15 @@ def render(dark):
     lines = []
     colors = ['#0c0c0c', '#c50f1f', '#13a10e', '#c19c00', '#0037da', '#881798', '#3a96dd', '#cccccc',
               '#767676', '#e74856', '#16c60c', '#f9f1a5', '#3b78ff', '#b4009e', '#61d6d6', '#f2f2f2']
-    for i, line in enumerate(logo):
+    for i in range(max(len(logo), len(output) + 3)):
+        line = logo[i] if i < len(logo) else ''
         lines.append(draw(line, 0, i, green))
         if i < len(output):
             label, value = output[i]
             if label is None:
                 lines.append(draw(value, 40, i, green if i == 0 else muted))
             else:
-                prefix = f'{label}: ' if label.strip() else '        '
+                prefix = f'{label}: ' if label.strip() else '          '
                 lines.append(draw(prefix, 40, i, green))
                 lines.append(draw(fit(value, 57-len(prefix)), 40 + len(prefix), i, fg))
         elif i in (len(output) + 1, len(output) + 2):
@@ -87,9 +91,10 @@ def render(dark):
                 y = first_baseline + i * leading - 15
                 lines.append(f'<rect x="{x:.3f}" y="{y}" width="{3*advance:.3f}" height="{leading}" fill="{colors[palette_row*8+j]}"/>')
     terminal = ''.join(lines)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="310" viewBox="0 0 960 310" role="img" aria-labelledby="title desc">
-<title id="title">github@mragetsars — neofetch profile</title><desc id="desc">Mardas ASCII logo beside a terminal profile with public GitHub information and pinned repositories.</desc>
-<rect width="960" height="310" fill="{bg}"/>{terminal}</svg>\n'''
+    height = 25 + (max(len(logo), len(output) + 3) - 1) * leading + 12
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{height}" viewBox="0 0 960 {height}" role="img" aria-labelledby="title desc">
+<title id="title">github@mragetsars — neofetch profile</title><desc id="desc">Mardas ASCII logo beside a terminal profile with public GitHub information and self-starred projects.</desc>
+<rect width="960" height="{height}" fill="{bg}"/>{terminal}</svg>\n'''
 
 changed = False
 for theme in ('dark', 'light'):
