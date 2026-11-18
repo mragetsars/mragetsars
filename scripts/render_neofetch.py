@@ -62,30 +62,38 @@ def render(dark):
     username = data['user']['login']
     title = f'github@{username}'
     output = [(None, title), (None, '-' * len(title))] + rows
-    lines = []
+    prompt = f'{username}@github:~$ '
+    lines = [draw(prompt, 0, 0, green), draw('neofetch', len(prompt), 0, fg)]
     colors = ['#0c0c0c', '#c50f1f', '#13a10e', '#c19c00', '#0037da', '#881798', '#3a96dd', '#cccccc',
               '#767676', '#e74856', '#16c60c', '#f9f1a5', '#3b78ff', '#b4009e', '#61d6d6', '#f2f2f2']
     for i in range(max(len(logo), len(output) + 3)):
         line = logo[i] if i < len(logo) else ''
-        lines.append(draw(line, 0, i, green))
+        row = i + 2
+        lines.append(draw(line, 0, row, green))
         if i < len(output):
             label, value = output[i]
             if label is None:
-                lines.append(draw(value, 50, i, green if i == 0 else muted))
+                lines.append(draw(value, 50, row, green if i == 0 else muted))
             else:
                 prefix = f'{label}: ' if label.strip() else '          '
-                lines.append(draw(prefix, 50, i, green))
-                lines.append(draw(fit(value, 55-len(prefix)), 50 + len(prefix), i, fg))
+                lines.append(draw(prefix, 50, row, green))
+                lines.append(draw(fit(value, 55-len(prefix)), 50 + len(prefix), row, fg))
         elif i in (len(output) + 1, len(output) + 2):
             palette_row = i - len(output) - 1
             for j in range(8):
                 x = start_x + (50 + j * 3) * advance
-                y = first_baseline + i * leading - 15
+                y = first_baseline + row * leading - 15
                 lines.append(f'<rect x="{x:.3f}" y="{y}" width="{3*advance:.3f}" height="{leading}" fill="{colors[palette_row*8+j]}"/>')
+    prompt_row = max(len(logo), len(output) + 3) + 3
+    lines.append(draw(prompt, 0, prompt_row, green))
+    x = start_x + len(prompt) * advance
+    y = first_baseline + prompt_row * leading - 14
+    lines.append(f'<rect class="cursor" x="{x:.3f}" y="{y}" width="{advance:.3f}" height="16" fill="{fg}"/>')
     terminal = ''.join(lines)
-    height = 25 + (max(len(logo), len(output) + 3) - 1) * leading + 12
+    height = first_baseline + prompt_row * leading + 7
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="{height}" viewBox="0 0 1040 {height}" role="img" aria-labelledby="title desc">
 <title id="title">github@mragetsars — neofetch profile</title><desc id="desc">Mardas ASCII logo beside a terminal profile with public GitHub information and self-starred projects.</desc>
+<style>@keyframes blink {{ 0%,49% {{ opacity: 1 }} 50%,100% {{ opacity: 0 }} }} .cursor {{ animation: blink 1s step-end infinite }} @media (prefers-reduced-motion: reduce) {{ .cursor {{ animation: none }} }}</style>
 {terminal}</svg>\n'''
 
 expected = {}
