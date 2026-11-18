@@ -175,7 +175,7 @@
       "name": "NYC-Redfin-Price-Prediction-Pipeline",
       "description": "Python data science and MLOps pipeline for NYC Redfin price prediction with Selenium, SQLite, gradient-boosting ensembles, Docker, and Kubernetes. Final Project for Introduction to Data Science at the University of Tehran.",
       "language": "Python",
-      "stars": 0,
+      "stars": 1,
       "fork": false,
       "archived": false,
       "pushed_at": "2026-08-02T16:04:57Z"
