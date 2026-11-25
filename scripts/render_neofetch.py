@@ -95,8 +95,8 @@ def render(dark):
     height = first_baseline + prompt_row * leading + 7
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="{height}" viewBox="0 0 1040 {height}" role="img" aria-labelledby="title desc">
 <title id="title">github@mragetsars — neofetch profile</title><desc id="desc">Mardas ASCII logo beside a terminal profile with public GitHub information and self-starred projects.</desc>
-<style>@keyframes blink {{ 0%,49% {{ opacity: 1 }} 50%,100% {{ opacity: 0 }} }} @keyframes type {{ from {{ clip-path: inset(0 100% 0 0) }} to {{ clip-path: inset(0 0 0 0) }} }} @keyframes show {{ from {{ opacity: 0 }} to {{ opacity: 1 }} }} .command {{ animation: type 1.2s steps(8,end) 0.4s both }} .result {{ animation: show 0.01s step-end 1.85s both }} .cursor {{ animation: blink 1s step-end infinite }} @media (prefers-reduced-motion: reduce) {{ .command, .result, .cursor {{ animation: none }} }}</style>
-{prompt_line}<g class="command" style="transform-box: fill-box">{command}</g><g class="result">{terminal}</g></svg>\n'''
+<style>@keyframes blink {{ 0%,49% {{ opacity: 1 }} 50%,100% {{ opacity: 0 }} }} @keyframes type {{ from {{ clip-path: inset(0 100% 0 0) }} to {{ clip-path: inset(0 0 0 0) }} }} @keyframes reveal {{ from {{ clip-path: inset(0 0 100% 0) }} to {{ clip-path: inset(0 0 0 0) }} }} .command {{ animation: type 1.2s steps(8,end) 0.4s both }} .result {{ animation: reveal 0.65s steps(14,end) 1.85s both }} .cursor {{ animation: blink 1s step-end infinite }} @media (prefers-reduced-motion: reduce) {{ .command, .result, .cursor {{ animation: none }} }}</style>
+{prompt_line}<g class="command" style="transform-box: fill-box">{command}</g><g class="result" style="transform-box: fill-box">{terminal}</g></svg>\n'''
 
 expected = {}
 paths = {}
