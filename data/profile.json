@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-11-27",
+  "updated_on": "2026-11-28",
   "user": {
     "login": "mragetsars",
     "bio": "Computer Engineering Student",
     "company": "University of Tehran",
     "location": "Tehran, Iran",
     "blog": "https://t.me/mragetsars_bot",
-    "followers": 29
+    "followers": 30
   },
   "repositories": [
     {
